@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="56571" started-at="2021-05-16T08:27:42Z" finished-at="2021-05-16T08:28:38Z">
+    <groups>
+    </groups>
+    <test name="Homepage" duration-ms="40441" started-at="2021-05-16T08:27:42Z" finished-at="2021-05-16T08:28:22Z">
+      <class name="Test.HomePage">
+        <test-method status="PASS" signature="initialise()[pri:0, instance:Test.HomePage@6ab7a896]" name="initialise" is-config="true" duration-ms="4266" started-at="2021-05-16T13:57:42Z" finished-at="2021-05-16T13:57:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialise -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:Test.HomePage@6ab7a896]" name="basePageNavigation" duration-ms="31673" started-at="2021-05-16T13:57:46Z" data-provider="getData" finished-at="2021-05-16T13:58:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nonresticteduser@qa.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:Test.HomePage@6ab7a896]" name="basePageNavigation" duration-ms="4348" started-at="2021-05-16T13:58:18Z" data-provider="getData" finished-at="2021-05-16T13:58:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[resticteduser@qa.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[789123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Test.HomePage@6ab7a896]" name="closeBrowser" is-config="true" duration-ms="114" started-at="2021-05-16T13:58:22Z" finished-at="2021-05-16T13:58:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Test.HomePage -->
+    </test> <!-- Homepage -->
+    <test name="Navigation Bar Visibility" duration-ms="7886" started-at="2021-05-16T08:28:22Z" finished-at="2021-05-16T08:28:30Z">
+      <class name="Test.validateNavigationBar">
+        <test-method status="PASS" signature="initialise()[pri:0, instance:Test.validateNavigationBar@402e37bc]" name="initialise" is-config="true" duration-ms="7547" started-at="2021-05-16T13:58:22Z" finished-at="2021-05-16T13:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialise -->
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:Test.validateNavigationBar@402e37bc]" name="basePageNavigation" duration-ms="204" started-at="2021-05-16T13:58:30Z" finished-at="2021-05-16T13:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Test.validateNavigationBar@402e37bc]" name="closeBrowser" is-config="true" duration-ms="125" started-at="2021-05-16T13:58:30Z" finished-at="2021-05-16T13:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Test.validateNavigationBar -->
+    </test> <!-- Navigation Bar Visibility -->
+    <test name="Page Title" duration-ms="8189" started-at="2021-05-16T08:28:30Z" finished-at="2021-05-16T08:28:38Z">
+      <class name="Test.validateTitle">
+        <test-method status="PASS" signature="initialise()[pri:0, instance:Test.validateTitle@6293abcc]" name="initialise" is-config="true" duration-ms="7521" started-at="2021-05-16T13:58:30Z" finished-at="2021-05-16T13:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialise -->
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:Test.validateTitle@6293abcc]" name="basePageNavigation" duration-ms="105" started-at="2021-05-16T13:58:38Z" finished-at="2021-05-16T13:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Test.validateTitle@6293abcc]" name="closeBrowser" is-config="true" duration-ms="558" started-at="2021-05-16T13:58:38Z" finished-at="2021-05-16T13:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Test.validateTitle -->
+    </test> <!-- Page Title -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
