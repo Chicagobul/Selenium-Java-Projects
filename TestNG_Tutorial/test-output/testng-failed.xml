@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <listeners>
+    <listener class-name="com.company.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="com.company.Day2">
+        <methods>
+          <include name="Day2demo"/>
+          <include name="firstexecution"/>
+          <include name="API"/>
+          <include name="BFSuite"/>
+        </methods>
+      </class> <!-- com.company.Day2 -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- THIS IS OUR CONFIGURATION FILE -->
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">12345</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- This dialect we have to give as per the DB we are using because every DB has diff format for
+             query -->
+        <property name="hbm2ddl.auto">create</property>
+        <!-- This we are using so that hibernate automatically creates the table as per the mappings we provide
+             update - it will create a table if not created before
+             create - it will every time create a table -->
+        <property name="show_sql">true</property>
+        <!-- To see what queries hibernate has created -->
+        <property name="format_sql">true</property>
+        <!-- To format the query and make it understandable -->
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+        <mapping class="org.example.Student"/>
+        <!-- to inform hibernate that we have a class which has to be considered as an entity -->
+        <mapping class="org.example.Address"/>
+        <!-- <mapping class="com.onetoone.Question"/>
+        <mapping class="com.onetoone.Answer"/> -->
+        <!-- <mapping class="com.onetomany.Question2"/>
+        <mapping class="com.onetomany.Answer2"/> -->
+        <mapping class="com.manytomany.Emp"/>
+        <mapping class="com.manytomany.Project"/>
+        <mapping resource="Person.hbm.xml"/>
+        <!-- path of our hibernate mapping file -->
+    </session-factory>
+</hibernate-configuration>
