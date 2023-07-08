@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="basePath">./</Property>
+    </Properties>
+    //this is to give the path of our .log file where the details have to be logged
+    <Appenders>
+        <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <SizeBasedTriggeringPolicy size="500" />
+            //Here we are giving size as 500kb as when the file size crosses this size it will create a new file with name
+            //in format given in file pattern
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Alpha.Demo" level="error" additivity="false">
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Root level="error">
+            //error means only error msg will get printed, to print all the logs we use trace
+            <AppenderRef ref="Console"/>
+            //this means it will print the output in console and will refer to console tag
+        </Root>
+    </Loggers>
+    //Root level means it is applicable to whole project
+    //We can create our own loggers tag if we want to log the details of specific .java file that logs only errors
+    //additivity="false" - it means that this should run only once and should not run again with root level tag
+</Configuration>
